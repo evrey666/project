@@ -1,22 +1,51 @@
-"use strict";
+'use strict';
 
-console.log(4 + ' 5');
+let num = 20;
 
-let incr = 10,
-    decr = 10;
+function showFirstMessage(text) {
+  console.log(text);
+  let num = 10;
+  console.log(num);
+}
+// такой вид функции называется function declaration
+// после фигурных скобок не нужно ставить точку с запятой
+// создаётся до начала выполнения скрипта
+// можно вызвать перед объявлением
 
-// ++incr;
-// --decr;
+showFirstMessage('Hello World!');
+console.log(num);
 
-console.log(++incr);
-console.log(--decr);
+// function calc(a, b) {
+//   return(a + b);
+// }
 
-console.log(5%2);
+// console.log(calc(4, 3));
+// console.log(calc(5, 6));
+// console.log(calc(10, 6));
 
-console.log(2 + 2 * 2 !== '6');
+function ret() {
+  let num = 50;
+  return num;
+}
+
+const anotherNum = ret();
+console.log(anotherNum);
+
+const logger = function() {
+  console.log('Hello!')
+}; // такой вид записи называтся function expression
+// при такой записи необходимо ставть точку с запятой
+// создаётся только тогда, когдаа до неё доходит поток кода
+// можно вызвать только после объявления
+
+logger();
 
 
-const isCheked = true,
-      isClose  = true;
-
-      console.log(isCheked !== isClose);
+const calc = (a, b) => {
+  console.log('1');
+  return a + b
+};
+// это стрелочная функция
+// не имеет контекста вызова
+// если функция умещается в одну строку -
+// можно опустить фигурные скобки и return
