@@ -1,30 +1,44 @@
 /*jshint esnext: true */
 
-let str = 'some';
-let strObj = new String();
+//To String
+// 1)
+console.log(typeof(String(null)));
+console.log(typeof(String(4)));
 
-// console.log(typeof(str));
-// console.log(typeof(strObj));
+// 2) конкатинация
+console.log(typeof(5 + ''));
 
-console.dir([1, 2, 3]);
+const num = 5;
 
-const soldier = {
-  health: 400,
-  armor: 100,
-  sayHello: function() {
-    console.log('Hello');
-  }
-};
+console.log('https://vk.com/catalog/' + num); // устаревшая запись
 
-const john = Object.create(soldier);
+const fontSize = 26 + 'px';
 
-// const john = {
-//   health: 100
-// };
+// To Number
+// 1)
+console.log(typeof(Number('3')));
 
-// john.__proto__ = soldier; // Устаревший формат
+// 2) унарный плюс
+console.log(typeof('+4'));
 
-// Object.setPrototypeOf(john, soldier);
+// 3)
+console.log(typeof(parseInt('15px', 10))); 
 
-// console.log(john.armor); 
-john.sayHello();
+let answer = +prompt('Hello', '');
+
+//To boolean
+
+// 0, '', null, undefined, NaN; - всегда превращается в false
+
+// 1)
+let switcher = null;
+
+if (switcher) {
+  console.log('Working...');
+}
+
+// 2)
+console.log(typeof(Boolean(4)));
+
+// 3)
+console.log(typeof(!!'2324'));
