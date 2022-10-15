@@ -1,44 +1,39 @@
 /*jshint esnext: true */
+'use strict';
 
-//To String
-// 1)
-console.log(typeof(String(null)));
-console.log(typeof(String(4)));
+// let number = 5; debugger
 
-// 2) конкатинация
-console.log(typeof(5 + ''));
+// function logNumber() {
+//   console.log(number); debugger
+// }
 
-const num = 5;
+// number = 6;
 
-console.log('https://vk.com/catalog/' + num); // устаревшая запись
+// logNumber(); debugger
 
-const fontSize = 26 + 'px';
+// number = 8;
 
-// To Number
-// 1)
-console.log(typeof(Number('3')));
+// logNumber(); debugger
 
-// 2) унарный плюс
-console.log(typeof('+4'));
-
-// 3)
-console.log(typeof(parseInt('15px', 10))); 
-
-let answer = +prompt('Hello', '');
-
-//To boolean
-
-// 0, '', null, undefined, NaN; - всегда превращается в false
-
-// 1)
-let switcher = null;
-
-if (switcher) {
-  console.log('Working...');
+function createCounter() {
+  let counter = 0;
+  const myFunction = function() { debugger
+    counter = counter +1; debugger
+    return counter; debugger
+  }
+  return myFunction;
 }
+debugger
+const increment = createCounter(); debugger
 
-// 2)
-console.log(typeof(Boolean(4)));
+const c1 = increment(); debugger
+const c2 = increment(); debugger
+const c3 = increment(); debugger
 
-// 3)
-console.log(typeof(!!'2324'));
+console.log(c1, c2, c3);
+
+{
+  let msg = 'Hello';
+}
+console.log(msg); // - Такой код не выполнится, т.к. переменная msg
+                  //   существует только внутри блока в фигурных скобках
