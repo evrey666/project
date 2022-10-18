@@ -1,39 +1,20 @@
 /*jshint esnext: true */
 'use strict';
 
-// let number = 5; debugger
+const box = document.getElementById('box');
+console.log(box);
 
-// function logNumber() {
-//   console.log(number); debugger
-// }
+const btns = document.getElementsByTagName('button'); //получили псевдомассив
+console.log(btns[0]);
 
-// number = 6;
+const circles = document.getElementsByClassName('circle');
+console.log(circles);
 
-// logNumber(); debugger
+//современные методы
+const hearts = document.querySelectorAll('.heart');
+hearts.forEach(item => {
+  console.log(item);
+});
 
-// number = 8;
-
-// logNumber(); debugger
-
-function createCounter() {
-  let counter = 0;
-  const myFunction = function() { debugger
-    counter = counter +1; debugger
-    return counter; debugger
-  }
-  return myFunction;
-}
-debugger
-const increment = createCounter(); debugger
-
-const c1 = increment(); debugger
-const c2 = increment(); debugger
-const c3 = increment(); debugger
-
-console.log(c1, c2, c3);
-
-{
-  let msg = 'Hello';
-}
-console.log(msg); // - Такой код не выполнится, т.к. переменная msg
-                  //   существует только внутри блока в фигурных скобках
+const oneHeart = document.querySelector('div');
+console.log(oneHeart);
